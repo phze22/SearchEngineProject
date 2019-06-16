@@ -1,0 +1,66 @@
+
+BENCHMARK RESULTS
+26TH NOVEMBER 2018 - UPDADTED WITH NEW QUERY WORDS
+
+The benchmark results in this file were found using JMH benchmarking. All the benchmarks were done on the
+same computer.
+
+The goal of the benchmark is to identify the differences in performance when searching for a query using
+forward index, using inverted index with a HashMap data structure, and using inverted index with a TreeMap 
+data structure, respectively.
+
+The query words used for this benchmark are a mix of common words found on all websites, uncommon words
+found on only one or few websites, and words that are not present on any website. 
+
+The score represents the average time in nanoseconds it took to run a single operation 
+(rounded to no decimal places).
+
+----------------------------------------------------------------------------------------------------------
+
+Using the tiny.txt file.
+Using 15 query words.
+
+Benchmark                      Mode     Cnt     Score       Error       Units
+
+SimpleIndex
+IndexBenchmark.measureAvgTime  avgt   	25  	15536       ± 336       ns/op
+
+InvertedIndex (HashMap)
+IndexBenchmark.measureAvgTime  avgt   	25  	939	 	    ± 11        ns/op
+
+InvertedIndex (TreeMap)
+IndexBenchmark.measureAvgTime  avgt   	25  	1415        ± 17        ns/op
+
+----------------------------------------------------------------------------------------------------------
+
+Using the small.txt file.
+Using 15 query words.
+
+Benchmark                      Mode  	Cnt	    Score       Error	    Units
+
+SimpleIndex
+IndexBenchmark.measureAvgTime  avgt   	25  	7851116     ± 148810  	ns/op
+
+InvertedIndex (HashMap)
+IndexBenchmark.measureAvgTime  avgt   	25  	4425	 	± 97	  	ns/op
+
+InvertedIndeex (TreeMap)
+IndexBenchmark.measureAvgTime  avgt   	25  	5742	 	± 168	  	ns/op
+
+----------------------------------------------------------------------------------------------------------
+
+Using medium.txt file.
+Using 15 query words.
+
+Benchmark                      Mode  	Cnt	    Score		Error		Units
+
+SimpleIndex
+IndexBenchmark.measureAvgTime  avgt   	25  	188252020 	± 1378974  	ns/op
+
+InvertedIndex (HashMap)
+IndexBenchmark.measureAvgTime  avgt   	25  	90126	 	± 895	  	ns/op
+
+InvertedIndex (TreeMap)
+IndexBenchmark.measureAvgTime  avgt   	25  	92167	 	± 335	  	ns/op
+
+----------------------------------------------------------------------------------------------------------

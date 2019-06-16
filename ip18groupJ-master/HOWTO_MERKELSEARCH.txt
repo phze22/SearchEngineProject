@@ -1,0 +1,30 @@
+Search Engine: MERKEL SEARCH - Howto
+======================================================================
+
+This HOTWO describes how to use the Merkel Search engine. 
+
+The search engine was built as part of the Introdoctory Programming project at the IT University of Copenhagen. 
+
+The search engine is managed and built with Gradle. In case you need instructions on how to use Gradle to build and run the search engine, see the HOWTO.txt file in this folder. 
+
+
+Features 
+----------------------------------------------------------------------
+
+  Database 
+The database of the search engine cam be changed by editing the path in the config.properties to database=DataBaseNameHere.
+
+The program is by default set to the ExtendDataBase.txt file that consists of all websites from the enwiki-medium.txt database merged with websites from 5 WebCrawls.
+
+
+  Index Type
+The Index type for the database can be changed in the SearchEngine Class on the following line: Index idx = new IndexTypeHere 
+
+This is per default set to: Index idx = new InvertedIndexHashMap();
+
+
+  Scoring algorithm 
+The algorithm used for calculating the score can be changed in the SearchEngine Class on the following line: Score score = new ScoreTypeHere.  
+
+This is per default set to: Score score = new OkapiBM25();
+ 

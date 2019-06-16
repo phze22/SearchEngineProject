@@ -1,0 +1,67 @@
+
+BENCHMARK RESULTS
+22ND NOVEMBER 2018
+
+The benchmark results in this file were found using JMH benchmarking. All the benchmarks were done on the
+same computer.
+
+The goal of the benchmarks is to identify the differences in performance when searching for a query using
+forward index, using inverted index with a HashMap data structure, and using inverted index with a TreeMap 
+data structure, respectively.
+
+----------------------------------------------------------------------------------------------------------
+
+Using the tiny.txt file.
+Using 15 query words.
+
+Benchmark                      Mode  	Cnt	Score		Error		Units
+
+SimpleIndex
+IndexBenchmark.measureAvgTime  avgt   	25	16304,047	± 310,544	ns/op
+
+
+InvertedIndex (HashMap)
+IndexBenchmark.measureAvgTime  avgt   	25	934,432		± 28,575	ns/op
+
+
+InvertedIndex (TreeMap)
+IndexBenchmark.measureAvgTime  avgt   	25	1630,924	± 43,732	ns/op
+
+----------------------------------------------------------------------------------------------------------
+
+Using the small.txt file.
+Using 15 query words.
+
+
+Benchmark                      Mode  	Cnt	Score		Error		Units
+
+SimpleIndex
+IndexBenchmark.measureAvgTime  avgt   	25	8020937,095	± 125235,754	ns/op
+
+
+InvertedIndex (HashMap)
+IndexBenchmark.measureAvgTime  avgt   	25	5333,511	± 114,150	ns/op
+
+
+InvertedIndex (TreeMap)
+IndexBenchmark.measureAvgTime  avgt   	25	6809,327	± 398,650	ns/op
+
+----------------------------------------------------------------------------------------------------------
+
+Using the medium.txt file.
+Using 15 query words.
+	
+Benchmark                      Mode  	Cnt	Score		Error		Units
+
+SimpleIndex
+IndexBenchmark.measureAvgTime  avgt   	25	197699618,090	± 10286523,038  ns/op
+
+
+InvertedIndex (HashMap)
+IndexBenchmark.measureAvgTime  avgt   	25	109584,694	± 5233,308	ns/op
+
+
+InvertedIndex (TreeMap)
+IndexBenchmark.measureAvgTime  avgt   	25  	115965,800	± 5221,254	ns/op
+
+----------------------------------------------------------------------------------------------------------

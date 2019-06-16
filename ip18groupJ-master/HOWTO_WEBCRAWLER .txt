@@ -1,0 +1,46 @@
+WebCrawler - HowTo 
+======================================================================
+
+This HOTWO describes how to use the WebCrawler developed for the Search Engine: Merkel Search project. The HOWTO is based on a setup where IntelliJ is used together with Gradle. 
+
+If you need instructions on how to use Gradle to build and run the search engine, see the HOWTO.txt file in this folder.
+
+
+START THE WEBCRAWLER 
+----------------------------------------------------------------------
+  Preparation - create a .txt file. 
+You must start by creating a .txt file in the folder you want the WebCrawler to write the flat file format to. 
+It is recommended to put it in the data folder that comes with this folder. 
+
+
+  Open IntelliJ and go to the 'webcrawler' folder
+Open IntelliJ and go to the 'webcrawler' folder. In this folder you will find three classes.  
+
+
+  Open the CrawlerWriter Class and run main. 
+Open the CrawlerWriter class and run the public static void main. 
+
+
+  Type in URL, amount of Websites and path.
+When running the main class, you will be asked to type in the following information to the terminal in IntelliJ: 
+- URL: Enter the URL of the website you wish to start the crawl on (https format) for example: https://www.dr.dk/
+- The number of pages you wish the crawler to visit (max 50 recommended) 
+- The path and the name of the file you wish to write on. If you have created the .txt file in the data folder this should be: data/yourfilename
+
+  Merge with existing dataset
+If you want to merge with the existing dataset you can do this by the terminal and the following command: 
+cat file1.txt file2.txt > newDataBaseFile.txt
+
+
+
+
+Problems
+----------------------------------------------------------------------
+
+  Jsoup library  
+In case you get problems with package org.jsoup, make sure that to add: 
+	compile 'org.jsoup:jsoup:1.11.3'
+To build.gradle dependencies. 
+
+
+ 

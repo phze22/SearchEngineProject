@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Merkel Search</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="code.js"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<style>
+    #spinner{
+        position: fixed;
+        top: 50%;
+        left: 47.8%;
+    }
+    #img-spinner{
+        width: 40%;
+    }
+    #header{
+        text-align: center;
+    }
+    #content{
+        text-align: center;
+        margin-top: -30px;
+    }
+    #searchbutton{
+        font-family: Arial;
+        background-color: #e2e2e2;
+        border: 1px solid black;
+        color: black;
+        padding: 6px 72px;
+        text-align: center;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 16px;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+    }
+    #searchbutton:hover{
+        background-color: #f9f5b7;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.10), 0 8px 25px 0 rgba(0,0,0,0.10);
+    }
+    #searchbutton:focus{
+        outline: 0;
+    }
+    #searchbox{
+        background: url(searchicon.png) no-repeat 95% 7px;
+        background-size: 20px;
+        font-size: 16px;
+        border: 1px solid black;
+        border-radius: 16px;
+        box-shadow: 0 3px 4px 0 rgba(0,0,0,0.24), 0 6px 25px 0 rgba(0,0,0,0.19);
+        width: 300px;
+        height: 15px;
+        transition: width 1s;
+
+    }
+    #searchbox:focus{
+        outline: 0;
+        width: 500px;
+    }
+    #responsesize{
+        font-family: Arial;
+        position: relative;
+        left: 90px;
+        margin-top: 50px;
+    }
+</style>
+<body>
+<div id="spinner" style="display:none">
+    <img id="img-spinner" src="merkelspinner.gif" alt="loading"/>
+</div>
+<div id="header">
+    <img src="logo2.png" alt="Merkel Search Logo">
+</div>
+<div id="content">
+    <input id="searchbox" type="text" placeholder="Ask Merkel..." />
+    <br/>
+    <button id="searchbutton">Search</button>
+</div>
+<div id="responsesize">
+</div>
+<div id="responsetime">
+</div>
+<div id="urllist">
+</div>
+<div>
+    <a href="https://thumbs.gfycat.com/MajesticBountifulHornbill-size_restricted.gif"><img src="merkelsmirk.png" alt="Merkel" style="position: fixed; right: 10px; bottom: -5px; width: 125px;"></a>
+</div>
+<div>
+</div>
+<script>
+    var input = document.getElementById("searchbox");
+    input.addEventListener("keyup", function(event) {
+        event.preventDefault();
+        if (event.keyCode === 13) {
+            document.getElementById("searchbutton").click();
+        }
+    });
+</script>
+</body>
+</html>
